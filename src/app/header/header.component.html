@@ -1,0 +1,66 @@
+<!-- The navbar section -->
+<section class="bg-light">
+  <nav class="navbar navbar-light navbar-expand-lg bg-light navigation">
+    <div class="container-fluid p-1">
+      <a [routerLink]="['']" class="navbar-brand">
+        <span class="text-danger fw-bolder Mulish">CHAT-AI</span>
+      </a>
+
+      <button
+        type="button"
+        class="navbar-toggler button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item me-3">
+            <a
+              class="nav-link text-dark Mulish"
+              [routerLink]="['/why-zeekart']"
+              routerLinkActive="active"
+              >Why ZeeKart</a
+            >
+          </li>
+
+          <li class="nav-item me-3">
+            <a
+              class="nav-link text-dark Mulish"
+              [routerLink]="['/contact-us']"
+              routerLinkActive="active"
+              >Contact Us</a
+            >
+          </li> -->
+        </ul>
+        <div class="navbar-nav ms-auto p-2">
+          <a
+            [routerLink]="['/login']"
+            routerLinkActive="active"
+            role="button"
+            class="btn btn-outline-secondary p-1 login text-dark Mulish"
+            >Log in</a
+          >
+          <a
+            [routerLink]="['/sign-in']"
+            routerLinkActive="active"
+            role="button"
+            class="btn btn-danger start_style ms-3 Mulish"
+            >Start for free</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<!-- The router outlet for the header section -->
+<div class="wrapper">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

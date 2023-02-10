@@ -1,0 +1,40 @@
+.btn-success {
+  background: #9b65c4 !important;
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background: #fff !important;
+}
+
+.text-dark {
+  color: #000;
+}
+
+.font {
+  font-size: 20px;
+}
+
+.bg-success {
+  background: #ddd8ee !important;
+}
+
+.text-danger {
+  color: #9b65c4 !important;
+}
+
+@media (max-width: 375px) {
+  .text-size {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .text-size {
+    font-size: 10.5px;
+  }
+  .start-style {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,63 @@
+.bg-light {
+  background: #fff !important;
+}
+
+.margin {
+  margin-top: 180px;
+}
+
+.btn-danger {
+  background: #c5a9fb !important;
+  border: none;
+}
+
+.text-warning {
+  color: #c5a9fb !important;
+  font-weight: 700;
+}
+
+.animation {
+  animation: slideMe 0.9s ease-in;
+}
+
+@keyframes slideMe {
+  0% {
+    transform: skewX(53deg) translate(-500px);
+  }
+
+  60% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.9s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.space {
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .margin {
+    margin-top: 90px;
+  }
+}

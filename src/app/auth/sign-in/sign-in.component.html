@@ -1,0 +1,116 @@
+<section class="bg-success vh-100">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card mt-5 border-light">
+          <div class="card-body p-5 text-center">
+            <a
+              [routerLink]="['']"
+              class="navbar-brand d-flex align-items-center justify-content-start"
+            >
+              <span class="text-danger fw-bold Mulish">CHAT-AI</span>
+            </a>
+            <h5 class="text-center fs-6 fw-bold mt-3 Mulish">REGISTER</h5>
+            <!-- <p class="text-start mb-2">A great step!!!</p> -->
+            <form>
+              <div class="form-outline mb-4">
+                <input
+                  type="name"
+                  class="form-control Mulish"
+                  name="name"
+                  formControlName="name"
+                  placeholder="name"
+                />
+                <div
+                  class="mb-4"
+                  *ngIf="
+                    signinForm.get('name').invalid &&
+                    (signinForm.get('name').dirty ||
+                      signinForm.get('name').touched)
+                  "
+                >
+                  <p class="text-dark">*please provide an email</p>
+                </div>
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control mt-4 Mulish"
+                  formControlName="email"
+                  placeholder="email"
+                />
+                <div
+                  class="mb-4"
+                  *ngIf="
+                    signinForm.get('email').invalid &&
+                    (signinForm.get('email').dirty ||
+                      signinForm.get('email').touched)
+                  "
+                >
+                  <p class="text-danger">*please provide your password</p>
+                </div>
+              </div>
+
+              <input
+                type="password"
+                class="form-control mt-4 Mulish"
+                name="password"
+                formControlName="password"
+                placeholder="password"
+              />
+
+              <div
+                class="mb-4"
+                *ngIf="
+                  signinForm.get('password').invalid &&
+                  (signinForm.get('password').dirty ||
+                    signinForm.get('password').touched)
+                "
+              >
+                <p class="text-danger">*password required</p>
+              </div>
+
+              <input
+                type="password"
+                class="form-control mt-4 Mulish"
+                formControlName="conpassword"
+                name="conpassword"
+                placeholder="confirm password"
+              />
+              <div
+                class="mb-4"
+                *ngIf="
+                  signinForm.get('conpassword').invalid &&
+                  (signinForm.get('conpassword').dirty ||
+                    signinForm.get('conpassword').touched)
+                "
+              >
+                <p class="text-danger">*password does not match</p>
+              </div>
+
+              <!-- <button class="btn btn-color w-100" type="submit"> -->
+              <a
+                type="submit"
+                [routerLink]="['/login']"
+                role="button"
+                class="btn btn-success text-light Mulish mt-5"
+                >Register</a
+              >
+              <!-- </button> -->
+            </form>
+            <!-- <div class="text-start mt-3">
+                <p class="fs-6 start-style Mulish">
+                  New to zeekart?
+                  <a
+                    [routerLink]="['/signup']"
+                    class="text-decoration-none text-success start-style Mulish"
+                    >Get started</a
+                  >
+                </p>
+              </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

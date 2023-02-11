@@ -9,18 +9,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SignInComponent implements OnInit {
   signinForm: FormGroup | any;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    // this.signinForm = this.fb.group(
-    //   {
-    //     name: ['', Validators.required],
-    //     email: ['', [Validators.required, Validators.email]],
-    //     password: ['', [Validators.required]],
-    //     conpassword: ['', [Validators.required]],
-    //   },
-    //   { validators: this.Mustmatch('password', 'conpassword') }
-    // );
+    this.signinForm = this.fb.group(
+      {
+        name: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required]],
+        conpassword: ['', [Validators.required]],
+      },
+      { validators: this.Mustmatch('password', 'conpassword') }
+    );
   }
 
   get f() {

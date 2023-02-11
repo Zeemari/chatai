@@ -29,7 +29,7 @@
                       signinForm.get('name').touched)
                   "
                 >
-                  <p class="text-dark">*please provide an email</p>
+                  <p class="text-dark">*email required</p>
                 </div>
 
                 <input
@@ -47,7 +47,7 @@
                       signinForm.get('email').touched)
                   "
                 >
-                  <p class="text-danger">*please provide your password</p>
+                  <p class="text-danger">*email required</p>
                 </div>
               </div>
 
@@ -87,8 +87,6 @@
               >
                 <p class="text-danger">*password does not match</p>
               </div>
-
-              <!-- <button class="btn btn-color w-100" type="submit"> -->
               <a
                 type="submit"
                 [routerLink]="['/login']"
@@ -96,18 +94,7 @@
                 class="btn btn-success text-light Mulish mt-5"
                 >Register</a
               >
-              <!-- </button> -->
             </form>
-            <!-- <div class="text-start mt-3">
-                <p class="fs-6 start-style Mulish">
-                  New to zeekart?
-                  <a
-                    [routerLink]="['/signup']"
-                    class="text-decoration-none text-success start-style Mulish"
-                    >Get started</a
-                  >
-                </p>
-              </div> -->
           </div>
         </div>
       </div>

@@ -12,16 +12,17 @@
             </a>
             <h5 class="text-center fs-6 fw-bold mt-3 Mulish">LOG IN</h5>
             <!-- <p class="text-start mb-2">A great step!!!</p> -->
-            <form>
+            <form [formGroup]="loginForm">
               <div class="form-outline mb-4">
                 <input
                   type="email"
                   class="form-control Mulish"
                   name="email"
                   formControlName="email"
+                  [(ngModel)]="email"
                   placeholder="email address"
                 />
-                <!-- <div
+                <div
                   class="mb-4"
                   *ngIf="
                     loginForm.get('email').invalid &&
@@ -29,17 +30,18 @@
                       loginForm.get('email').touched)
                   "
                 >
-                  <p class="text-warning">*please provide an email</p>
-                </div> -->
+                  <p class="text-warning text-start">*email required</p>
+                </div>
 
                 <input
                   type="password"
                   name="password"
                   class="form-control mt-4 Mulish"
                   formControlName="password"
+                  [(ngModel)]="password"
                   placeholder="***********"
                 />
-                <!-- <div
+                <div
                   class="mb-4"
                   *ngIf="
                     loginForm.get('password').invalid &&
@@ -47,8 +49,8 @@
                       loginForm.get('password').touched)
                   "
                 >
-                  <p class="text-warning">*please provide your password</p>
-                </div> -->
+                  <p class="text-warning text-start">*password required</p>
+                </div>
               </div>
 
               <div class="d-flex align-items-center justify-content-between">
@@ -74,7 +76,7 @@
               <!-- <button class="btn btn-color w-100" type="submit"> -->
               <a
                 type="submit"
-                [routerLink]="['/chat-in']"
+                (click)="login()"
                 role="button"
                 class="btn btn-success text-light Mulish mt-4"
                 >Login</a

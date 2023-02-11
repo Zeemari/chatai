@@ -7,12 +7,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
-  signinForm: FormGroup | any;
+  signupForm: FormGroup | any;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.signinForm = this.fb.group(
+    this.signupForm = this.fb.group(
       {
         name: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
@@ -24,7 +24,7 @@ export class SignInComponent implements OnInit {
   }
 
   get f() {
-    return this.signinForm.controls;
+    return this.signupForm.controls;
   }
 
   Mustmatch(password: any, conpassword: any) {
